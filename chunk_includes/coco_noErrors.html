@@ -1,0 +1,107 @@
+<style media="screen" type="text/css">
+  div {
+    width: 60em;
+    font-size: large;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: 1em;
+  }
+
+  h3 {
+    font-size: 40pt;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    text-align: center;
+  }
+
+  p {
+    font-size: large;
+    text-align: justify;
+  }
+
+  body {
+    color: white;
+    background-color: black;
+    margin-left: .5em;
+    margin-right: .5em;
+    margin-top: 3em;
+    font-size: 24pt;
+  }
+
+</style>
+
+
+<html>
+
+  <body>
+    <div class="sound" style="width: auto; height: auto; z-index: 0">
+    <!-- only tested on wav and mp3 formats, ogg likely to work as well
+    src has to be a url, cannot be a file on your computer   -->
+    <audio autoplay>
+      <source src="https://github.com/anthonyyacovone/Coco_ErrorDetection_Ibex/blob/master/coco_detect_intro.mp3?raw=true" type="audio/mpeg">
+    </audio>
+  </div> 
+
+    <div style="margin: 0 auto; text-align: justify; border:1px solid white; background-color:black">
+      <h3><u>Speech Error Detection Study</u></h3>
+
+
+      <form id="inputarea" onSubmit="return false;">
+        <p>The story will begin shortly! Please turn up your volume and listen carefully. This introduction is to show you audio without errors and to give
+        you an example of the audio quality. <br><br><br><b>IMPORTANT: THERE ARE NO ERRORS DURING THIS SECTION!</b></p><br><br>
+        <input type="button" id="button" value="Press 'Space' after an Error!" style="font-size: large;">
+
+        <br>
+        <p id="CountLine">Number of errors counted: 0</p>
+        <br>
+        
+        <p style="text-align:left;"> When this section is finished, type the last word you heard and hit 'Enter': <input style="font-size: large" type = "text">
+
+        <form id="errorDetectIntro">
+          <input id="username" type="hidden" name="username" value="">
+          <input id="userdate" type="hidden" name="userdate" value="">
+          <input id="datatosend" type="hidden" name="datatosend">
+
+        </form>
+
+      </form>
+          
+    </div>
+
+    <script>
+      var pressesIntro = 0;
+      var correctKey = "13"
+      var start = performance.now()
+      var listIntro = ""
+      
+      document.getElementById("button").focus();
+
+      document.addEventListener('keyup', logKey);
+
+      function logKey(e) {
+        var keycode = (e.keyCode ? e.keyCode : e.which);
+    if (keycode == "32") {
+  
+      pressesIntro = pressesIntro + 1
+      RT = performance.now() - start;
+      time = performance.now();
+
+
+      document.getElementById("CountLine").innerHTML = "Number of errors counted: " + pressesIntro;
+      
+      listIntro = listIntro + "," + pressesIntro + "," + RT;
+      
+      document.getElementById("datatosend").value = start + listIntro 
+
+      
+    }
+  }
+     
+    </script>
+
+  </body>
+
+</html>
+
+
+

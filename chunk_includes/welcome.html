@@ -1,0 +1,109 @@
+
+<style media="screen" type="text/css"> 
+div { 
+   width: 60em; 
+   font-size: large; 
+   padding-left: 1em;
+   padding-right: 1em;
+   padding-bottom: -1em;
+   }
+   
+h1 {
+   margin-top:1em;
+   margin-bottom:.3em;
+   text-align: center;
+   }
+   
+p { 
+   font-size: large;
+   text-align: justify;  
+   }
+  
+body {
+    color: white;
+    background-color: black;
+    margin-left: .5em;
+    margin-right: .5em;
+    margin-top: 3em;
+    font-size: 24pt;
+}
+
+   
+</style>
+
+<html>
+  
+<div id="WelcomeScreen" name="WelcomeScreen" style="margin: 0 auto; text-align: justify; border:1px solid white; background-color:black"; width:50%>
+<center>
+  <h1> Welcome! </h1>
+  <i> Thank you for participating in this study! </i>
+</center>
+<br>
+<hr><br>
+In this study, you will be asked to listen to someone read a children's story! The story is roughly 30 minutes long. Occasionally, the speaker will make 
+a mistake and say the wrong word. Your job is to listen carefully and push the space tab whenever you hear an error. At the end of the story, you will 
+type the last word that the speaker said into the text box to complete the task. <br> <br> <br>
+  
+<b>Note:</b> You will not be able to pause the story after starting! So please give yourself 30-40 minutes of uninterrupted time! <br><br> 
+
+You will start by listening to some introductory sentences which have <b>NO ERRORS</b> in them. This is to provide a short snippet of how the audio sounds in general (i.e. the audio quality).
+<br><br>
+<hr>
+<b><u><p style="margin-bottom:.4em;">Comprehension Check:</p></u></b>
+
+<font>
+  1. <i>What do you hear an error?</i><br>
+  <td>
+    <input name="question1l" type="radio" value="left" class="obligatory" id="q1left" /><label for="q1left"> Push Enter</label><br>
+    <input name="question1l" type="radio" value="right" id="q1right"/><label for="q1right"> Push Space</label>
+  </td>
+<br><br>
+  
+  2. <i>What do you do at the end of the study?</i><br>
+  <td>
+    <input name="question2r" type="radio" value="left" class="obligatory" id="q2left" /><label for="q2left"> Type the last word of the story into the box</label><br>
+    <input name="question2r" type="radio" value="right" class= id="q2right"/><label for="q2right"> Exit the browser window</label>
+  </td>
+<br><br>
+  
+  3. <i>Will there be any errors in the first practice part?</i><br>
+  <td>
+    <input name="question3r" type="radio" value="left" class="obligatory" id="q3left" /><label for="q3left"> Yes!</label><br>
+    <input name="question3r" type="radio" value="right" class= id="q3right"/><label for="q3right"> No!</label>
+  </td>
+<br><br>
+  
+    4. <i>Is your screen in Full screen mode?</i><br>
+  <td>
+    <input name="question4l" type="radio" value="left" class="obligatory" id="q4left" /><label for="q4left"> Yes!</label><br>
+    <input name="question4l" type="radio" value="right" class= id="q4right"/><label for="q4right"> No!</label>
+  </td>
+<br><br>
+  
+    5. <i>Is your volume turned up sufficiently? (We recommend using headphones/ear buds, if available)</i><br>
+  <td>
+    <input name="question5l" type="radio" value="left" class="obligatory" id="q5left" /><label for="q5left"> Yes!</label><br>
+    <input name="question5l" type="radio" value="right" class= id="q5right"/><label for="q5right"> No!</label>
+  </td>
+<br>
+</font>
+  
+  </tr>
+ <p>
+    <input type="text" style="width: 400px; height: 70px; color: red; font-size: large; font-weight: bold;" class="obligatory" name="continue" onfocus="if(this.value == 'Please type: Ready') { this.value = ''; }" value="Please type: Ready"/>
+  </p>
+  <p> Then press Enter to continue!</p>
+  <br><br>
+  
+<td colspan="2">
+<label class="error" for="intro"></label>
+</td>
+</tr>
+
+
+</div>
+
+<br><br>
+  
+</html>
+

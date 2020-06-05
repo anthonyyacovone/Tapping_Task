@@ -1,0 +1,44 @@
+body {
+    color: white;
+    font-family: Verdana, Geneva, sans-serif;
+    background-color: black;
+    margin-left: 10em;
+    margin-top: 5em;
+    margin-right: 10em;
+}
+
+li.QuestionAlt-scale-box {
+    width: auto;
+    height: auto;
+    display: table;
+    padding: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+p.Message-message {
+    font-size: 25;
+    width: 100%;    
+    margin-top: 3em;
+}
+
+.Message-continue-link:visited {
+    color: white;
+    font-size: 20;
+}
+
+.DashedSentence-ospan {
+  background-color: black; 
+
+}
+
+.DashedSentence-sentence {
+  background-color: black; 
+}
+
+div.DashedSentence-sentence { 
+  margin-top: 3em; 
+  font-size: 25;
+  width: 35em;
+  border:1px;
+  border-color: white;
+}
